@@ -4,7 +4,11 @@ const AddContact = ({ contactHandler }) => {
   const [value, setValue] = useState(null);
 
   const changeHandler = (e) => {
-    setValue({ ...value, [e.target.name]: e.target.value, id: Date.now() });
+    setValue({
+      ...value,
+      [e.target.name]: e.target.value,
+      id: Math.floor(Math.random() * 100),
+    });
   };
 
   const submitHandler = (e) => {
