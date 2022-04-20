@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const ShowContact = ({ deleteHandler, contact }) => {
-  console.log(contact);
   return (
     <div>
       {contact.map((i) => {

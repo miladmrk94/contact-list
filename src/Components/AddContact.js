@@ -7,7 +7,9 @@ const AddContact = ({ contactHandler }) => {
     setValue({
       ...value,
       [e.target.name]: e.target.value,
-      id: Math.floor(Math.random() * 100),
+      //create id for data (save to localStorage)
+      // You do not need an ID when you get information from another server
+      // id: Math.floor(Math.random() * 100),
     });
   };
 
