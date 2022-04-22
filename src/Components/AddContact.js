@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../Styles/AddContact.module.css";
+import styles from "../Styles/AddContact.module.scss";
 const AddContact = ({ contactHandler }) => {
   const [value, setValue] = useState(null);
 

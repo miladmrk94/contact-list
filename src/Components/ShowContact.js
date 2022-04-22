@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const ShowContact = ({ deleteHandler, contact }) => {
   return (
     <div>
@@ -20,12 +21,12 @@ const ShowContact = ({ deleteHandler, contact }) => {
               to={{ pathname: `/contact/${i.id}`, state: { contact: i } }}
               style={{ display: "flex" }}
             >
-              <div
+              <img
+                src={`https://avatars.dicebear.com/api/adventurer-neutral/${i.name}.svg`}
+                alt="avatar"
                 style={{
-                  width: "30px",
-                  height: "30px",
-                  backgroundColor: "green",
-                  borderRadius: "60px",
+                  width: "60px",
+                  height: "60px",
                 }}
               />
               <div style={{ display: "flex", flexDirection: "column" }}>
