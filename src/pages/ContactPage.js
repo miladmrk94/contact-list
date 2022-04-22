@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import http from "../services/HttpRequest";
+
 const ContactPage = ({ location, match, history }) => {
   const data = location.state.contact;
 
