@@ -1,0 +1,54 @@
+.contactBox {
+  margin: 1rem;
+  .userBox {
+    display: flex;
+    margin: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .userInfo {
+      display: flex;
+      text-decoration: none;
+      &:link {
+        text-decoration: none;
+      }
+
+      &:visited {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:active {
+        text-decoration: none;
+      }
+      list-style: none;
+
+      .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 1rem;
+      }
+      .text {
+        margin: 0.3rem 0 0rem 1rem;
+        .name {
+          color: #26255e;
+          font-size: 18px;
+        }
+        .email {
+          color: rgb(209, 209, 209);
+          font-size: 13px;
+
+        }
+      }
+    }
+    .delete {
+        width: 35px;
+        height: 35px;
+        border-radius: 1rem;
+        border: none;
+    }
+  }
+}

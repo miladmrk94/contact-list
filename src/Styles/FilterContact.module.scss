@@ -1,0 +1,12 @@
+.inputBox {
+  display: flex;
+
+  margin-top: 1rem;
+  input {
+    border: none;
+    border-bottom: 2px solid rgb(158, 157, 157);
+    outline: none;
+    width: 90%;
+    font-size: 15px;
+  }
+}

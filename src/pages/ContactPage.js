@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import http from "../services/HttpRequest";
+import styles from "../Styles/ContactPage.module.scss";
 
 const ContactPage = ({ location, match, history }) => {
   const data = location.state.contact;
-
   const [nameValue, setNameValue] = useState(data);
 
   const changeHandler = (e) => {
@@ -21,23 +21,37 @@ const ContactPage = ({ location, match, history }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <label>name:</label>
-        <input
-          type="text"
-          value={nameValue.name}
-          name="name"
-          onChange={changeHandler}
-        />
+    <div className={styles.box}>
+      <div className={styles.profile}>
+        <div className={styles.userImg}>
+          <p>{nameValue.name}</p>
+          <img
+            src={`https://avatars.dicebear.com/api/adventurer-neutral/${nameValue.name}.svg`}
+            alt="avatar"
+          />
+        </div>
+      </div>
 
-        <label>email:</label>
-        <input
-          type="text"
-          value={nameValue.email}
-          name="email"
-          onChange={changeHandler}
-        />
+      <form className={styles.form} onSubmit={submitHandler}>
+        <div className={styles.name}>
+          <label>name:</label>
+          <input
+            type="text"
+            value={nameValue.name}
+            name="name"
+            onChange={changeHandler}
+          />
+        </div>
+        <div className={styles.email}>
+          <label>email:</label>
+          <input
+            type="text"
+            value={nameValue.email}
+            name="email"
+            onChange={changeHandler}
+          />
+        </div>
+
         <button type="submit">SAVE</button>
       </form>
     </div>

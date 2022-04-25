@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import FilterContact from "../Components/FilterContact";
 import ShowContact from "../Components/ShowContact";
 import http from "./../services/HttpRequest";
+import styles from "../Styles/HomePage.module.scss";
 
 const HomePage = () => {
   const [contact, setContact] = useState([]);
@@ -74,12 +75,16 @@ const HomePage = () => {
 
   return (
     <>
-      <FilterContact onChange={searchHandler} />
-      {contact ? (
-        <ShowContact contact={contact} deleteHandler={deleteHandler} />
-      ) : (
-        <h3>Oops</h3>
-      )}
+      <h3 className="header">Contacts</h3>
+      <div className={styles.show}>
+        <h3>All Contacts</h3>
+        <FilterContact onChange={searchHandler} />
+        {contact ? (
+          <ShowContact contact={contact} deleteHandler={deleteHandler} />
+        ) : (
+          <h3>Oops</h3>
+        )}
+      </div>
     </>
   );
 };

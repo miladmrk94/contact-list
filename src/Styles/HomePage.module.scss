@@ -1,0 +1,20 @@
+.show {
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    padding: 2rem;
+
+   
+    h3{
+        color: #26255e;
+    }
+}

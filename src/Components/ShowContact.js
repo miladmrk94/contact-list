@@ -1,40 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import styles from "../Styles/ShowContact.module.scss";
+
+import {
+  HiDotsHorizontal,
+  HiOutlineTrash,
+  HiOutlineAnnotation,
+} from "react-icons/hi";
 
 const ShowContact = ({ deleteHandler, contact }) => {
+  const handler = () => {};
+
   return (
-    <div>
+    <div className={styles.contactBox}>
       {contact.map((i) => {
         return (
-          <div
-            key={i.id}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              padding: "5px",
-              border: "solid 3px black",
-              margin: "15px",
-              justifyContent: "space-evenly",
-            }}
-          >
+          <div className={styles.userBox} key={i.id}>
             <Link
+              className={styles.userInfo}
               to={{ pathname: `/contact/${i.id}`, state: { contact: i } }}
-              style={{ display: "flex" }}
             >
               <img
                 src={`https://avatars.dicebear.com/api/adventurer-neutral/${i.name}.svg`}
                 alt="avatar"
-                style={{
-                  width: "60px",
-                  height: "60px",
-                }}
+                className={styles.image}
               />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <h4>{i.name}</h4>
-                <h4>{i.email}</h4>
+              <div className={styles.text}>
+                <h4 className={styles.name}>{i.name}</h4>
+                <h4 className={styles.email}>{i.email}</h4>
               </div>
             </Link>
-            <button onClick={() => deleteHandler(i.id)}>Delete</button>
+
+            <button
+              className={styles.delete}
+              onClick={() => deleteHandler(i.id)}
+            >
+              <HiOutlineTrash size="20px" />
+            </button>
           </div>
         );
       })}

@@ -19,12 +19,13 @@ const AddContact = ({ contactHandler }) => {
       contactHandler(value);
       e.target.reset();
     } else {
-      alert("pllllllllz");
+      alert("plz Completed");
     }
     setValue("");
   };
   return (
-    <div>
+    <div className={styles.box}>
+      <h3>Add Contact</h3>
       <form className={styles.formStyle} onSubmit={submitHandler}>
         <br />
 
@@ -36,7 +37,9 @@ const AddContact = ({ contactHandler }) => {
         <input type="text" name="email" onChange={changeHandler} />
         <br />
 
-        <button type="submit">Add</button>
+        <button className={styles.button} type="submit">
+          Add
+        </button>
       </form>
     </div>
   );
