@@ -1,0 +1,82 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: repeating-linear-gradient(45deg, rgba(42, 80, 235, 0.07) 0, rgba(42, 80, 235, 0.07) 2px, transparent 0, transparent 50%);
+        background-size: 22px 22px;
+        background-color: #5d9af0;
+        height: 300px;
+        width: 100%;
+        border-end-end-radius: 3rem;
+        border-bottom-left-radius: 3rem;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        p{
+            font-size: 23px;
+            font-weight: 800;
+            position: fixed;
+            margin-top: -9rem;
+            
+        }
+        .userImg{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 14rem;
+            
+            img{
+                width: 120px;
+                height: 120px;
+                border-radius: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            }
+        }
+        
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        width: 80%;
+        .name {
+            margin: 1rem;
+            input {
+                border: none;
+                border-bottom: 2px solid rgb(158, 157, 157);
+                outline: none;
+                width:100%;
+                font-size: 15px;
+                background-color: transparent;
+            }
+        }
+        .email {
+            margin: 1rem;
+            input {
+                border: none;
+                border-bottom: 2px solid rgb(158, 157, 157);
+                outline: none;
+                width:100%;
+                font-size: 15px;
+                background-color: transparent;
+    
+            }
+        }
+        button {
+            margin-top: 2rem;
+            width: 200px;
+            height: 30px;
+            border-radius: 1rem;
+            border: 1px solid rgb(26, 25, 23);
+        }
+        
+    }
+}
